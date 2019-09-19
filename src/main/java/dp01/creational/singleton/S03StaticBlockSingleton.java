@@ -1,22 +1,22 @@
 
 package dp01.creational.singleton;
 //same as eager initialization except it support exception handling while creating singleton object
-public class StaticBlockSingleton {
+public class S03StaticBlockSingleton {
 
-    private static StaticBlockSingleton instance;
+    private static S03StaticBlockSingleton instance;
     
-    private StaticBlockSingleton(){}
+    private S03StaticBlockSingleton(){}
     
     //static block initialization for exception handling
     static{
         try{
-            instance = new StaticBlockSingleton();
+            instance = new S03StaticBlockSingleton();
         }catch(Exception e){
             throw new RuntimeException("Exception occured in creating singleton instance");
         }
     }
     
-    public static StaticBlockSingleton getInstance(){
+    public static S03StaticBlockSingleton getInstance(){
         return instance;
     }
 }

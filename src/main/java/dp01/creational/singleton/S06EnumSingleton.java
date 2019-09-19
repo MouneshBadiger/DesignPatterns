@@ -6,7 +6,7 @@ package dp01.creational.singleton;
  *  The drawback is that the enum type is somewhat inflexible; 
  *  for example, it does not allow lazy initialization.
  */
-public enum EnumSingleton {
+public enum S06EnumSingleton {
 
 	 INSTANCE;
     

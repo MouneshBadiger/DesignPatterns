@@ -1,15 +1,15 @@
 
 package dp01.creational.singleton;
 
-public class ThreadSafeSingleton {
+public class S04ThreadSafeSingleton {
 
-    private static ThreadSafeSingleton instance;
+    private static S04ThreadSafeSingleton instance;
     
-    private ThreadSafeSingleton(){}
+    private S04ThreadSafeSingleton(){}
     
-    public static synchronized ThreadSafeSingleton getInstance(){
+    public static synchronized S04ThreadSafeSingleton getInstance(){//Higher scoper
         if(instance == null){
-            instance = new ThreadSafeSingleton();
+            instance = new S04ThreadSafeSingleton();
         }
         return instance;
     }
@@ -22,11 +22,11 @@ public class ThreadSafeSingleton {
      *     ensure that only one instance of a singleton class is created.
 
     Below code snippet provides the double-checked locking implementation.*/
-    public static ThreadSafeSingleton getInstanceUsingDoubleLocking(){
+    public static S04ThreadSafeSingleton getInstanceUsingDoubleLocking(){
 	    if(instance == null){
-	        synchronized (ThreadSafeSingleton.class) {
+	        synchronized (S04ThreadSafeSingleton.class) {//lower scope
 	            if(instance == null){
-	                instance = new ThreadSafeSingleton();
+	                instance = new S04ThreadSafeSingleton();
 	            }
 	        }
 	    }
